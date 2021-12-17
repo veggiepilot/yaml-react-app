@@ -1,8 +1,13 @@
 import './App.css';
+import Header from './components/header';
 
 function App() {
   return (
-    <h1>Hi</h1>
+    <>
+      <Header>
+        <>This should output in our Header component</>
+      </Header>
+    </>
   );
 }
 
