@@ -4,6 +4,7 @@ import Header from './components/header';
 import SearchForm from './components/searchForm'
 import API from './utils/API'
 import Spinner from './components/spinner'
+import Info from './components/info'
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('Tame Impala')
@@ -44,7 +45,7 @@ function App() {
       <div className="container">
         { loading ? <Spinner /> : (
           <>
-            <pre>{JSON.stringify(info, null, 2)}</pre>
+            <Info info={info}/>
             <pre>{JSON.stringify(results, null, 2)}</pre>
           </>
         ) }
