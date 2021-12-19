@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/yaml-react-app/static/css/main.6078cef1.css",
+    "main.js": "/yaml-react-app/static/js/main.3d840b01.js",
+    "static/js/787.db4b597f.chunk.js": "/yaml-react-app/static/js/787.db4b597f.chunk.js",
+    "index.html": "/yaml-react-app/index.html",
+    "main.6078cef1.css.map": "/yaml-react-app/static/css/main.6078cef1.css.map",
+    "main.3d840b01.js.map": "/yaml-react-app/static/js/main.3d840b01.js.map",
+    "787.db4b597f.chunk.js.map": "/yaml-react-app/static/js/787.db4b597f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6078cef1.css",
+    "static/js/main.3d840b01.js"
+  ]
+}
