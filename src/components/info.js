@@ -4,10 +4,10 @@ const Info = props => {
     const { info } = props
     const { Name, wTeaser, wUrl, yUrl } = info
     return (
-        <div className="row">
+        <div className="row" style={ {paddingTop: 30} }>
             {yUrl && (
                 <div className="column">
-                    <Iframe src={yUrl}/>
+                    <Iframe src={yUrl} title={Name}/>
                 </div>
             )}
             <div className="column">

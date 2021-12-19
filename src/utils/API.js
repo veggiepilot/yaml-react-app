@@ -4,8 +4,9 @@ const PROXY_URL = `https://octoproxymus.herokuapp.com/?secret=${process.env.REAC
 
 const API_URL = `https://tastedive.com/api/similar?info=1`;
 
-export default {
+const API = {
   getRecommendations: function(searchTerm) {
     return axios(`${PROXY_URL}${encodeURIComponent(`${API_URL}&q=${searchTerm}`) }`)
   }
 }
+export default API
