@@ -8,6 +8,8 @@ import Spinner from './components/spinner'
 function App() {
   const [searchTerm, setSearchTerm] = useState('Tame Impala')
   const [loading, setLoading] = useState(true)
+  const [info, setInfo] = useState(null)
+  const [results, setResults] = useState([])
 
   useEffect(() => {
     getRecommendations()
@@ -17,7 +19,12 @@ function App() {
     setLoading(true)
     try {
       const results = await API.getRecommendations(searchTerm)
-      console.log(results)
+      if(results?.data?.Similar?.Info && results.data.Similar.Info.length > 0) {
+        setInfo(results.data.Similar.Info[0])
+      }
+      if(results?.data?.Similar?.Results) {
+        setResults(results.data.Similar.Results)
+      }
     } catch (err) {
       alert(err)
     }
@@ -35,7 +42,12 @@ function App() {
         />
       </Header>
       <div className="container">
-        { loading ? <Spinner /> : null }
+        { loading ? <Spinner /> : (
+          <>
+            <pre>{JSON.stringify(info, null, 2)}</pre>
+            <pre>{JSON.stringify(results, null, 2)}</pre>
+          </>
+        ) }
       </div>
     </>
   );
