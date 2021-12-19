@@ -3,6 +3,7 @@ import './App.css';
 import Header from './components/header';
 import SearchForm from './components/searchForm'
 import API from './utils/API'
+import Spinner from './components/spinner'
 
 function App() {
   const [searchTerm, setSearchTerm] = useState('Tame Impala')
@@ -23,6 +24,7 @@ function App() {
     setLoading(false)
   }
 
+
   return (
     <>
       <Header>
@@ -32,7 +34,7 @@ function App() {
         />
       </Header>
       <div className="container">
-        
+        { loading ? <Spinner /> : null }
       </div>
     </>
   );

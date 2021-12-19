@@ -1,6 +1,8 @@
 # You Might Also Like ...
 A music recommendation react application.
 
+CSS Spinner: https://projects.lukehaas.me/css-loaders/
+
 ## APIs Used
 * [https://tastedive.com/read/api](https://tastedive.com/read/api)
 ---
